@@ -3,30 +3,30 @@
 
 int main(void)
 {
-    char x = '#';
-    char y = ' ';
+ //   char x = '#';
+ //   char y = ' ';
     int h;
     
     // gets user input and checks if valid
-    do
+    while ((h < 0) || (h > 23))
     {
         printf("Please enter a number between 0 and 23 for the pyramid's height: ");
         h = GetInt();
         if ((h < 0) || (h > 23))
             printf("INVALID NUMBER!\n");
     }
-    while ((h < 0) || (h > 23));
+    
     
     // creates pyramid
-    for (int n = 0; n < h; n++)
+    for (int i = 0; i < h; i++)
         {
-        for (int w = 2; w <= (h - n); w++)
+        for (int j = 0; j <= (h - i) - 2; j++)
             {
-                printf("%c",y);
+                printf("%c",' ');
             }
-            for (int z = 1; z <= (n + 2); z++)
+            for (int k = 0; k <= (i + 1); k++)
                 {
-                    printf("%c",x);
+                    printf("%c",'#');
                 }
                         printf("\n"); 
         }
